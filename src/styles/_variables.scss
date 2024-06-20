@@ -1,0 +1,33 @@
+$layout-side-padding: 40px;
+$controls-height-m: 40px;
+$controls-height-l: 50px;
+
+$font-size: 14px;
+$controls-font-size-s: calc($font-size * 0.75);
+$controls-font-size-m: $font-size;
+$controls-font-size-l: calc($font-size * 1.25);
+$controls-font-size-xl: calc($font-size * 1.5);
+
+$controls-btn-border-radius: 5px;
+$controls-border-width: 1px;
+$controls-form-border-radius: 6px;
+
+$color-header: white;
+$color-btn: white;
+$color-btn-bg: #1f7d63;
+$color-btn-bg-hover: #279b7a;
+$color-header-bg: #fc8787;
+$color-form-controls-border: #808080;
+$color-form-controls-border-color-focus: #ccc;
+
+$btn-transition: color 0.15s ease-in-out, background 0.15s ease-in-out,
+  background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+  box-shadow 0.15s ease-in-out;
+$input-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+$header-main-p: 1vw;
+$header-top-p: 0.5vw;
+
+//main
+
+$layout-pt: 2vw;
+$layout-pb: 1vw;

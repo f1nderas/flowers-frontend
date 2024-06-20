@@ -1,0 +1,18 @@
+@import "variables";
+
+.home-page {
+  padding: 20px;
+}
+
+.layout-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.slider {
+  &-list {
+    display: flex;
+    gap: 20px;
+  }
+}
