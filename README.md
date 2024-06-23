@@ -1,3 +1,5 @@
+https://f1nderas.github.io/flowers-frontend/
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
