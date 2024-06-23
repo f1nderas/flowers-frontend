@@ -1,6 +1,7 @@
 import ProductCard from "../components/UI/ProductCard/ProductCard";
 import "../styles/AdvicePage.scss";
 import { Check } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const products = [
   {
@@ -35,10 +36,15 @@ const products = [
   },
 ];
 const AdvicePage = () => {
+  const navigate = useNavigate();
+  const goBack = () => {
+    navigate(-1);
+  };
   return (
     <>
       <div className="section">
         <div className="container">
+          <button onClick={goBack}>go back</button>
           <h1 className="h1_title">Инструкция по уходу за цветами</h1>
           <div className="advice">
             <div className="advice-left">

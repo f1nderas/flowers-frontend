@@ -5,6 +5,7 @@ import L from "leaflet";
 import { MapPin, Flower2, User } from "lucide-react";
 import ReactDOMServer from "react-dom/server";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const center = [56.870848, 35.924131];
 
@@ -60,6 +61,11 @@ const FlyToLocation = ({ coords }) => {
 };
 
 const ContactPage = () => {
+  const navigate = useNavigate();
+  const goBack = () => {
+    navigate(-1);
+  };
+
   const [addresses, setAddresses] = useState(initialAddresses);
   const [userLocation, setUserLocation] = useState(null);
   const [selectedCoords, setSelectedCoords] = useState(null);
@@ -80,6 +86,7 @@ const ContactPage = () => {
     <>
       <div className="section">
         <div className="container">
+          <button onClick={goBack}>go back</button>
           <div className="app">
             <div className="map-container">
               <MapContainer

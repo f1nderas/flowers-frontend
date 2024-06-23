@@ -1,7 +1,16 @@
+import { useNavigate } from "react-router-dom";
+
 const DeliveryPage = () => {
+  const navigate = useNavigate();
+
+  const goBack = () => {
+    navigate(-1);
+  };
+
   return (
     <>
       <div className="container">
+        <button onClick={goBack}> go back</button>
         <div className="section">
           <h1 className="h1_title">Доставка и оплата</h1>
         </div>
