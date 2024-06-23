@@ -41,7 +41,7 @@ function App() {
       <Header />
       <main className="main">
         <PathDisplay />
-        <Routes>
+        <Routes basename="/flowers-frontend/">
           {/* {pageList.map(({ path, component: Component }) => {
             return <Route key={path} path={path} element={<component />} />;
           })} */}
