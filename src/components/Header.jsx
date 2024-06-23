@@ -35,13 +35,13 @@ const Header = () => {
           <div className="header-phone">
             <ul className="header-phone_list">
               <li className="header-phone_item">
-                <a href="tel:+74822609960" className="header-phone_link">
-                  +74822609960
+                <a href="tel:+79999999999" className="header-phone_link">
+                  +79999999999
                 </a>
               </li>
               <li className="header-phone_item">
-                <a href="tel:+79632209960" className="header-phone_link">
-                  +79632209960
+                <a href="tel:+79999999999" className="header-phone_link">
+                  +79999999999
                 </a>
               </li>
             </ul>

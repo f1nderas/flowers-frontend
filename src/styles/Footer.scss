@@ -1,0 +1,31 @@
+.footer {
+  background: linear-gradient(
+    0deg,
+    rgb(255, 0, 0) 0%,
+    rgb(252, 135, 135) 40%,
+    rgb(255, 255, 255) 100%
+  );
+  color: white;
+  &-inner {
+    display: grid;
+    grid-template-areas:
+      "logo phone"
+      "copyright copyright";
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+  &-logo {
+    grid-area: logo;
+    letter-spacing: 10px;
+    font-size: 70px;
+    -webkit-text-stroke: 1px black;
+  }
+  &-phone {
+    grid-area: phone;
+    color: black;
+    font-size: 2rem;
+  }
+  &-copyright {
+    grid-area: copyright;
+  }
+}

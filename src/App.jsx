@@ -8,6 +8,7 @@ import DeliveryPage from "./pages/DeliveryPage";
 import { AdvicePage } from "./pages/AdvicePage";
 import ContactPage from "./pages/ContactPage";
 import { SinglePage } from "./pages/SinglePage";
+import Footer from "./components/Footer";
 
 const pageList = [
   {
@@ -19,7 +20,7 @@ const pageList = [
     component: DeliveryPage,
   },
   {
-    path: "blog",
+    path: "advice",
     component: AdvicePage,
   },
   {
@@ -52,6 +53,7 @@ function App() {
           <Route path="contact/:id" element={<SinglePage />} />
         </Routes>
       </main>
+      <Footer />
     </>
   );
 }
