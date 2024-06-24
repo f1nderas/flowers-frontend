@@ -113,7 +113,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="section">
+      <div className="popular-goods section">
         <div className="container">
           <h2 className="section_title">ПОПУЛЯРНЫЕ ТОВАРЫ </h2>
           <div className="slider">
@@ -141,4 +141,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export { HomePage };

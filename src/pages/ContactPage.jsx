@@ -150,4 +150,4 @@ const ContactPage = () => {
   );
 };
 
-export default ContactPage;
+export { ContactPage };

@@ -28,6 +28,10 @@ ol {
   margin: 0;
 }
 
+.main {
+  min-height: 100vh;
+}
+
 // ul {
 //   list-style: none;
 // }
@@ -96,7 +100,6 @@ button:not(:disabled) {
 }
 
 .client-reviews {
-  background-color: #eeedea;
   &.section {
     padding-bottom: 3vw;
     padding-top: 3vw;
