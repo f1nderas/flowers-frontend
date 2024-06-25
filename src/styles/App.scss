@@ -146,3 +146,27 @@ ol li {
   -webkit-text-stroke: 1px black;
   letter-spacing: 10px;
 }
+
+.goBack {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 100;
+  transition: 0.3s all;
+  width: 10rem;
+  &:hover {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.1);
+  }
+}
+
+.path-display {
+  letter-spacing: 2px;
+  color: #999999;
+}

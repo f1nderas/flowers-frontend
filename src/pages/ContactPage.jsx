@@ -2,7 +2,7 @@ import "../styles/ContactPages.scss";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-import { MapPin, Flower2, User } from "lucide-react";
+import { MapPin, Flower2, User, ArrowLeft } from "lucide-react";
 import ReactDOMServer from "react-dom/server";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -86,7 +86,9 @@ const ContactPage = () => {
     <>
       <div className="section">
         <div className="container">
-          <button onClick={goBack}>go back</button>
+          <button onClick={goBack} className="goBack">
+            <ArrowLeft />
+          </button>
           <div className="app">
             <div className="map-container">
               <MapContainer

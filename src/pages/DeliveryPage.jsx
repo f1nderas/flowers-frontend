@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-
+import { ArrowLeft } from "lucide-react";
 const DeliveryPage = () => {
   const navigate = useNavigate();
 
@@ -10,7 +10,9 @@ const DeliveryPage = () => {
   return (
     <>
       <div className="container">
-        <button onClick={goBack}> go back</button>
+        <button onClick={goBack} className="goBack">
+          <ArrowLeft />
+        </button>
         <div className="section">
           <h1 className="h1_title">Доставка и оплата</h1>
         </div>

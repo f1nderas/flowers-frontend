@@ -17,7 +17,7 @@ const PathDisplay = () => {
     return null;
   }
   return (
-    <div>
+    <div className="path-display">
       <Link to="/">Главная</Link>
       {currentPath && ` / ${currentPath}`}
     </div>
