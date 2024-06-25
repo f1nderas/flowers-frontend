@@ -1,5 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../hook/useAuth";
+import "../styles/Login.scss";
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -17,19 +18,30 @@ const LoginPage = () => {
 
   return (
     <>
-      <div className="container">
-        <div>Login Page</div>
-        <form onSubmit={handleSubmit}>
-          <label>
-            Email
-            <input type="email" name="email" />
-          </label>
-          <label>
-            Password
-            <input type="password" name="password" />
-          </label>
-          <button type="submit">Login</button>
-        </form>
+      <div className="login">
+        <div className="container">
+          <div className="login-inner">
+            <div className="login_title h1_title">
+              Вход в кабинет покупателя
+            </div>
+            <form onSubmit={handleSubmit} className="login_form form">
+              <div className="form-group">
+                <label htmlFor="email">Телефон или Email</label>
+                <input id="email" type="email" name="email" />
+              </div>
+              <div className="form-group">
+                <label htmlFor="password">Пароль</label>
+                <input id="password" type="password" name="password" />
+              </div>
+              <div className="form-controls">
+                <button className="btn" type="submit">
+                  Войти
+                </button>
+              </div>
+            </form>
+            <div className="login_form"></div>
+          </div>
+        </div>
       </div>
     </>
   );
