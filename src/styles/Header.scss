@@ -84,10 +84,7 @@
   }
   &-logo {
     position: relative;
-    -webkit-text-stroke: 1px black;
-    letter-spacing: 10px;
     grid-area: logo;
-    font-size: 70px;
     display: inline-block;
     // will-change: filter;
     // transition: filter 300ms;

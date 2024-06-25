@@ -1,6 +1,6 @@
 import "../styles/Header.scss";
 import { Search, User, ShoppingCart } from "lucide-react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -51,10 +51,12 @@ const Header = () => {
 
       <div className="header-main ">
         <div className="header-main_inner container">
-          <div className="header-logo">Вальс Цветов</div>
+          <div className="header-logo logo">Вальс Цветов</div>
           <div className="header-help">
             <div className="header-help_user">
-              <User />
+              <Link to="/private">
+                <User />
+              </Link>
             </div>
             <div className="header-help_cart">
               <ShoppingCart />

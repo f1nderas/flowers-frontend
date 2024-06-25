@@ -7,7 +7,10 @@ const Layout = () => {
   return (
     <>
       <Header />
-      <PathDisplay />
+      <div className="container">
+        <PathDisplay />
+      </div>
+
       <main className="main">
         <Outlet />
       </main>

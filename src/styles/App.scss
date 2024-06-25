@@ -1,5 +1,13 @@
 @import "variables";
 
+@font-face {
+  font-family: "Anticva";
+  src: url("../assets/fonts/Anticva-Regular.woff2") format("woff2"),
+    url("../assets/fonts/Anticva-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   box-sizing: border-box;
   font-size: 10px;
@@ -130,4 +138,11 @@ ol li {
 .h1_title {
   font-size: 40px;
   font-weight: 700;
+}
+
+.logo {
+  font-family: "Anticva", sans-serif;
+  font-size: 70px;
+  -webkit-text-stroke: 1px black;
+  letter-spacing: 10px;
 }
