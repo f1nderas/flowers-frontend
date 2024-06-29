@@ -1,48 +1,19 @@
 @import "variables";
+@import "base";
 
-@font-face {
-  font-family: "Anticva";
-  src: url("../assets/fonts/Anticva-Regular.woff2") format("woff2"),
-    url("../assets/fonts/Anticva-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-html {
-  box-sizing: border-box;
-  font-size: 10px;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-body {
-  margin: 0;
-  font-size: 14px;
-  line-height: 1.5;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol {
-  margin: 0;
-}
+$layout-pt: 2vw;
+$layout-pb: 1vw;
+$layout-side-padding: 40px;
+$controls-height-m: 40px;
 
 .main {
-  min-height: 100vh;
+  flex: 1;
+  background-color: $main-color;
 }
 
-// ul {
-//   list-style: none;
-// }
+button {
+  border: none;
+}
 
 a {
   color: inherit;
@@ -56,15 +27,6 @@ a {
   margin: 0 auto;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 button:not(:disabled) {
   cursor: pointer;
 }
@@ -75,15 +37,17 @@ button:not(:disabled) {
   justify-content: center;
   height: $controls-height-m;
   max-width: 100%;
-  color: $color-btn;
-  border-radius: $controls-btn-border-radius;
+  color: white;
+  border-radius: 5px;
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
   user-select: none;
   background-color: black;
-  transition: $btn-transition;
+  transition: color 0.15s ease-in-out, background 0.15s ease-in-out,
+    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
   outline: none;
 }
 
@@ -120,6 +84,7 @@ button:not(:disabled) {
   &_title {
     font-size: 29.4px;
     margin-bottom: 1rem;
+    padding-left: 2rem;
     font-weight: 700;
   }
   p {

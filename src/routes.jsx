@@ -1,11 +1,15 @@
-import { HomePage } from "./pages/HomePage";
-import { DeliveryPage } from "./pages/DeliveryPage";
-import { AdvicePage } from "./pages/AdvicePage";
-import { ContactPage } from "./pages/ContactPage";
-import { SinglePage } from "./pages/SinglePage";
-import { NotFoundPage } from "./pages/NotFoundPage";
-import { LoginPage } from "./pages/LoginPage";
-import { PrivatePage } from "./pages/PrivatePage";
+import {
+  HomePage,
+  DeliveryPage,
+  AdvicePage,
+  ContactPage,
+  SinglePage,
+  NotFoundPage,
+  LoginPage,
+  PrivatePage,
+  FavoritesPage,
+} from "./index";
+
 import { RequireAuth } from "./hoc/RequireAuth";
 
 const routes = [
@@ -37,6 +41,15 @@ const routes = [
       </RequireAuth>
     ),
     name: "Личный кабинет",
+  },
+  {
+    path: "favorites",
+    element: (
+      <RequireAuth>
+        <FavoritesPage />
+      </RequireAuth>
+    ),
+    name: "Избранное",
   },
   {
     path: "contact",

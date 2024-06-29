@@ -1,4 +1,4 @@
-import "../styles/ContactPages.scss";
+import "./ContactPages.scss";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
@@ -26,16 +26,30 @@ const createIcon = (IconComponent, color) => {
     html: ReactDOMServer.renderToString(
       <div
         style={{
-          backgroundColor: "green",
-          borderRadius: "50%",
+          width: "max-content",
+          backgroundColor: "white",
+          borderRadius: "18px",
           display: "flex",
-          justifyContent: "center",
           alignItems: "center",
-          width: "32px",
-          height: "32px",
+          gap: "4px",
+          paddingRight: "4px",
+          border: "2px solid green",
+          overflow: "hidden",
         }}
       >
-        <IconComponent color={color} size={24} />
+        <div
+          style={{
+            backgroundColor: "green",
+            borderRadius: "50%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            padding: "3px",
+          }}
+        >
+          <IconComponent color={color} size={24} />
+        </div>
+        <span style={{ fontSize: "12px" }}>Вальс Цветов</span>
       </div>
     ),
     className: "custom-icon",

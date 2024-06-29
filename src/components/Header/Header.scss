@@ -1,9 +1,11 @@
-@import "variables";
+@import "../../styles/variables";
+
+$header-main-p: 1vw;
+$header-top-p: 0.5vw;
+$controls-height-m: 40px;
 
 .header {
-  color: $color-header;
-  // background-color: $color-header-bg;
-  // box-shadow: 0 36px 20px red;
+  color: $main-color;
   &-top {
     background: red;
     &_inner {
@@ -25,8 +27,7 @@
       list-style: none;
       gap: 18px;
     }
-    &_item {
-    }
+
     &_link.active {
       color: rgb(191, 191, 191);
     }
@@ -45,12 +46,7 @@
     }
   }
   &-main {
-    background: linear-gradient(
-      180deg,
-      rgba(255, 0, 0, 1) 0%,
-      rgba(252, 135, 135, 1) 40%,
-      rgba(255, 255, 255, 1) 100%
-    );
+    @include gradient(180deg);
     &_inner {
       display: grid;
       grid-template-areas: "logo search help";
@@ -110,9 +106,6 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      > span {
-        // color: $color-btn-bg;
-      }
     }
   }
   &-search {
@@ -120,31 +113,31 @@
     width: 30rem;
     margin: 0 auto;
     display: flex;
-    border-radius: $controls-form-border-radius;
+    border-radius: 6px;
     &_input {
       outline: none;
       flex-grow: 1;
       width: 150px;
       padding: 1rem;
       height: $controls-height-m;
-      border-radius: $controls-form-border-radius;
-      border: $controls-border-width solid $color-form-controls-border;
+      border-radius: 6px;
+      border: 1px solid #808080;
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
       border-right: none;
-      transition: $input-transition;
+      background-color: $main-color;
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
       &:focus {
         box-shadow: none;
-        border-color: $color-form-controls-border-color-focus;
+        border-color: #ccc;
       }
     }
 
     &_btn {
       width: $controls-height-m;
       height: $controls-height-m;
-      border-radius: 0 $controls-form-border-radius $controls-form-border-radius
-        0;
-      border: $controls-border-width solid $color-form-controls-border;
+      border-radius: 0 6px 6px 0;
+      border: 1px solid #808080;
       border-left: none;
     }
   }

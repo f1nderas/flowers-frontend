@@ -1,11 +1,8 @@
+@import "../../styles/variables";
+
 .footer {
-  background: linear-gradient(
-    0deg,
-    rgb(255, 0, 0) 0%,
-    rgb(252, 135, 135) 40%,
-    rgb(255, 255, 255) 100%
-  );
-  color: white;
+  @include gradient(0deg);
+  color: $main-color;
   padding: 2rem 0;
   &-inner {
     display: grid;

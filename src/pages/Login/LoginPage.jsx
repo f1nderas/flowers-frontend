@@ -1,6 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import { useAuth } from "../hook/useAuth";
-import "../styles/Login.scss";
+import { useAuth } from "../../hook/useAuth";
+import "./Login.scss";
+import { Eye } from "lucide-react";
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -31,12 +32,17 @@ const LoginPage = () => {
               </div>
               <div className="form-group">
                 <label htmlFor="password">Пароль</label>
-                <input id="password" type="password" name="password" />
+                <div className="input">
+                  <input id="password" type="password" name="password" />
+                  <Eye />
+                </div>
               </div>
               <div className="form-controls">
                 <button className="btn" type="submit">
                   Войти
                 </button>
+                <div>Восстановить пароль</div>
+                <div>Зарегестрироваться</div>
               </div>
             </form>
             <div className="login_form"></div>

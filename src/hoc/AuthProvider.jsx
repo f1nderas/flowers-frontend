@@ -3,6 +3,8 @@ import { createContext, useState } from "react";
 export const AuthContext = createContext(null);
 
 export const AuthProvider = ({ children }) => {
+  // const [like, setLike] = useState(false);
+  // const [basket, setBasket] = useState(false);
   const [user, setUser] = useState(null);
   const signIn = (newUser, cb) => {
     setUser(newUser);

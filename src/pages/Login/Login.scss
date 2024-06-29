@@ -1,0 +1,55 @@
+.login {
+  &-inner {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &_title {
+    flex: 1 1 100%;
+    margin-bottom: 2rem;
+  }
+  &_form {
+    flex: 1 1 50%;
+  }
+}
+
+.form {
+  &-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    label {
+      font-size: 2rem;
+      // flex-basis: 18rem;
+      flex-shrink: 0;
+    }
+    .input {
+      position: relative;
+    }
+    input {
+      padding: 9px 8px;
+      outline: none;
+      width: 100%;
+    }
+    svg {
+      position: absolute;
+      right: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &-controls {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    button {
+      padding: 0 2rem;
+      opacity: 0.8;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    div {
+      border-bottom: 1px dotted;
+    }
+  }
+}

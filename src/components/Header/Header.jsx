@@ -1,5 +1,5 @@
-import "../styles/Header.scss";
-import { Search, User, ShoppingCart } from "lucide-react";
+import "./Header.scss";
+import { Search, User, ShoppingCart, Heart } from "lucide-react";
 import { NavLink, Link } from "react-router-dom";
 
 const Header = () => {
@@ -56,6 +56,11 @@ const Header = () => {
             <div className="header-help_user">
               <Link to="/private">
                 <User />
+              </Link>
+            </div>
+            <div className="header-help_likes">
+              <Link to="/favorites">
+                <Heart />
               </Link>
             </div>
             <div className="header-help_cart">

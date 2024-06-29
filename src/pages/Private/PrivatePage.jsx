@@ -1,4 +1,4 @@
-import { useAuth } from "../hook/useAuth";
+import { useAuth } from "../../hook/useAuth";
 import { useNavigate } from "react-router-dom";
 
 export const PrivatePage = () => {

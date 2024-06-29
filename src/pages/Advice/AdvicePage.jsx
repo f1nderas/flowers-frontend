@@ -1,5 +1,5 @@
-import ProductCard from "../components/UI/ProductCard/ProductCard";
-import "../styles/AdvicePage.scss";
+import ProductCard from "../../components/UI/ProductCard/ProductCard";
+import "./AdvicePage.scss";
 import { Check, ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 const items = [

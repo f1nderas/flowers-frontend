@@ -1,31 +1,45 @@
+import { useState } from "react";
 import styled from "./Card.module.scss";
-import { Heart, ShoppingBasket } from "lucide-react";
+import { Heart, Plus, Minus } from "lucide-react";
+import classNames from "classnames";
 
-const Card = (props) => {
+const Card = ({ img, text }) => {
+  const [like, setLike] = useState(false);
+  const [addBasket, setAddBasket] = useState(false);
+
   return (
     <div className={styled.card + " feature-card"}>
-      <button className={styled.cardFavoritesBtn}>
+      <button
+        className={classNames(styled.like, {
+          [styled.active]: like,
+        })}
+        onClick={() => {
+          setLike((prevValue) => !prevValue);
+        }}
+      >
         <Heart />
       </button>
-      <div className={styled.cardPhoto}>
-        <a href="#" className={styled.cardPhotoLink}>
-          <img src={props.img} alt="" className="lazyload" />
+      <div className={styled.photo}>
+        <a href="#" className={styled.photoLink}>
+          <img src={img} alt="" className="lazyload" />
         </a>
       </div>
-      <div className={styled.cardTit}>
-        <a href="#" className={styled.cardLink}>
-          Букет из 15 белых французских роз в упаковке
+      <div className={styled.tit}>
+        <a href="#" className={styled.link}>
+          {text}
         </a>
       </div>
-      <div className={styled.cardBottom}>
-        <div className={styled.cardPrice}>
-          <span className={styled.cardPriceLabel}>От</span>
-          <span className={styled.cardPriceCur}>500 руб.</span>
+      <div className={styled.bottom}>
+        <div className={styled.price}>
+          <span className={styled.priceLabel}>От</span>
+          <span className={styled.priceCur}>500 руб.</span>
         </div>
-
-        <a href="#" className={styled.cardBtnLink}>
-          <ShoppingBasket />
-        </a>
+        <button
+          className={styled.basketBtn}
+          onClick={() => setAddBasket((prevValue) => !prevValue)}
+        >
+          {addBasket ? <Minus /> : <Plus />}
+        </button>
       </div>
     </div>
   );
