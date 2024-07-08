@@ -87,3 +87,38 @@
     height: 20px;
   }
 }
+.quantityContainer {
+  display: flex;
+  align-items: center;
+}
+
+.minusBtn,
+.plusBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.minusBtn {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.plusBtn {
+  opacity: 0;
+  transform: translateX(10px);
+}
+
+.quantityContainer:hover .minusBtn,
+.quantityContainer:hover .plusBtn {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.quantity {
+  margin: 0 8px;
+}

@@ -34,7 +34,9 @@ const LoginPage = () => {
                 <label htmlFor="password">Пароль</label>
                 <div className="input">
                   <input id="password" type="password" name="password" />
-                  <Eye />
+                  <button className="form_btn_absolute">
+                    <Eye />
+                  </button>
                 </div>
               </div>
               <div className="form-controls">
@@ -45,7 +47,6 @@ const LoginPage = () => {
                 <div>Зарегестрироваться</div>
               </div>
             </form>
-            <div className="login_form"></div>
           </div>
         </div>
       </div>

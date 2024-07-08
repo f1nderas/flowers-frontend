@@ -9,16 +9,46 @@ import { useNavigate } from "react-router-dom";
 
 const center = [56.870848, 35.924131];
 
+const storeHours = {
+  aroundTheClock: "Круглосуточно",
+  daily: "пн-вс 8:00 - 20:00",
+  weekdayWeekend: {
+    weekdays: "пн-чт 8:00 - 20:00",
+    weekend: "пт,сб 8:00 - 21:00",
+  },
+};
+
 const initialAddresses = [
-  { id: 1, name: "Ул. Красина 46", coords: [56.87773, 35.907423] },
-  { id: 2, name: "Ул. Хрустальная 12", coords: [56.889164, 35.904027] },
-  { id: 3, name: "Ул. Маяковского 31", coords: [56.86215, 35.943607] },
+  {
+    id: 1,
+    name: "Ул. Красина 46",
+    coords: [56.87773, 35.907423],
+    time: storeHours.daily,
+  },
+  {
+    id: 2,
+    name: "Ул. Хрустальная 12",
+    coords: [56.889164, 35.904027],
+    time: storeHours.weekdayWeekend,
+  },
+  {
+    id: 3,
+    name: "Ул. Маяковского 31",
+    coords: [56.86215, 35.943607],
+    time: storeHours.weekdayWeekend,
+  },
   {
     id: 4,
     name: "Ул. Академика Туполева 113а",
     coords: [56.863291, 35.961896],
+    time: storeHours.weekdayWeekend,
   },
-  { id: 6, name: "Ул. Горького 124а", coords: [56.869122, 35.891819] },
+  {
+    id: 6,
+    name: "Ул. Горького 124а",
+    coords: [56.869122, 35.891819],
+    time: storeHours.aroundTheClock,
+  },
 ];
 
 const createIcon = (IconComponent, color) => {
@@ -108,7 +138,7 @@ const ContactPage = () => {
               <MapContainer
                 center={center}
                 zoom={13}
-                style={{ height: "500px", width: "100%" }}
+                style={{ height: "100%", width: "100%" }}
               >
                 <TileLayer
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -154,7 +184,15 @@ const ContactPage = () => {
                     onClick={() => handleAddressClick(address.coords)}
                     className="feature-card"
                   >
-                    {address.name}
+                    <div>{address.name}</div>
+                    {typeof address.time === "string" ? (
+                      <div>{address.time}</div>
+                    ) : (
+                      <>
+                        <div>{address.time.weekdays}</div>
+                        <div>{address.time.weekend}</div>
+                      </>
+                    )}
                   </li>
                 ))}
               </ul>
