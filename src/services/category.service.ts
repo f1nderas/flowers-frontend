@@ -4,7 +4,7 @@ import { API_URL } from '@/config/api.config'
 
 import { ICategory, ICategoryInput } from '@/shared/types/category.interface'
 
-const isBuildTime = process.env.IS_DOCKER_BUILD === 'true'
+const isBuildTime = process.env.APP_ENV === 'build'
 
 class CategoryService {
 	async getAll() {

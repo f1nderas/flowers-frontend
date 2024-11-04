@@ -4,7 +4,7 @@ import { API_URL } from '@/config/api.config'
 
 import { IProduct, IProductInput } from '@/shared/types/product.interface'
 
-const isBuildTime = process.env.IS_DOCKER_BUILD === 'true'
+const isBuildTime = process.env.APP_ENV === 'build'
 
 class ProductService {
 	async getAllForUser(searchTerm?: string | null) {
