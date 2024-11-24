@@ -5,7 +5,7 @@
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
-		"start": "next start",
+		"start": "next start -H 0.0.0.0",
 		"lint": "next lint"
 	},
 	"dependencies": {
@@ -42,6 +42,7 @@
 		"recharts": "^2.12.7",
 		"redux-persist": "^6.0.0",
 		"sass": "^1.77.8",
+		"sharp": "^0.33.5",
 		"tailwind-merge": "^2.4.0",
 		"tailwindcss-animate": "^1.0.7",
 		"zod": "^3.23.8"
